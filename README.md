@@ -75,5 +75,4 @@
 	Decision trees
 	Depth-first search
 	Breadth-first search
-<3>Lecture 14 – Summary</h3>
-	Summary
+<h3>Lecture 14 – Summary</h3>
