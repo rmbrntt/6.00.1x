@@ -1,5 +1,4 @@
-# 6.00.1x
-MITx
+# MITx 6.00.1x
 <h2>Week 1</h2>
 <h3>Lecture 1 – Introduction:</h3>
 	What a computer does
@@ -15,7 +14,7 @@ MITx
 	Straightline programs
 	Branching programs
 <h2>Week 2</h2>
-	Lecture 3 – Simple algorithms:
+	<h3>Lecture 3 – Simple algorithms:</h3>
 	Simple programs
 	Iteration
 	Input
@@ -25,55 +24,55 @@ MITx
 	Approximate solutions
 	Bisection search
 	Newton-Raphson
-	Lecture 4 – Functions: Function syntax
+	<h3>Lecture 4 – Functions: Function syntax</h3>
 	Abstraction by specification
 	Functions and scoping
 	Floating point numbers
 	Specifications
 	Modules
-Week 3
-Lecture 5 – Recursion:
+<h2>Week 3</h2>
+<h3>Lecture 5 – Recursion:</h3>
 Recursion
 Inductive reasoning
 Divide and conquer
-Lecture 6 – Objects:
+<h3>Lecture 6 – Objects:</h3>
 Structured types and mutability
 Tuples
 Lists and mutability
 Functions as objects
 Dictionaries
-Week 4
-Lecture 7 – Debugging:
+<h2>Week 4</h2>
+<h3>Lecture 7 – Debugging:</h3>
 Testing and debugging
 Black box testing
 Glass box testing
 Integration testing and unit testing
 Debugging with binary search
-Lecture 8 – Assertions and Exceptions
+<h3>Lecture 8 – Assertions and Exceptions</h3>
 Assertions
 Exceptions
-Week 5
-Lecture 9 – Efficiency and orders of growth:
+<h2>Week 5</h2>
+<h3>Lecture 9 – Efficiency and orders of growth:</h3>
 Complexity
 How to measure complexity
 Asymptotic notation
-Lecture 10 – Memory and search:
+<h3>Lecture 10 – Memory and search:</h3>
 Memory storage
 Indirection
 Searching and sorting methods
 Hashing
-Week 6
-Lecture 11 – Classes: Definition of classes
+<h2>Week 6</h2>
+<h3>Lecture 11 – Classes: Definition of classes</h3>
 Classes versus instances
 Methods
 Bindings of values
 Exceptions
-Lecture 12 – Object Oriented Programming and Inheritance:
+<h3>Lecture 12 – Object Oriented Programming and Inheritance:</h3>
 Inheritance
 Object oriented programming
-Week 7
-Lecture 13 – Trees:
+<h2>Week 7</h2>
+<h3>Lecture 13 – Trees:</h3>
 Decision trees
 Depth-first search
 Breadth-first search
-Lecture 14 – Summary
+<3>Lecture 14 – Summary</h3>
