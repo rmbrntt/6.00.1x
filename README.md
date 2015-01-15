@@ -1,12 +1,12 @@
 # 6.00.1x
 MITx
-<h1>Week 1</h1>
-Lecture 1 – Introduction:
+<h2>Week 1</h2>
+<h3>Lecture 1 – Introduction:</h3>
 	What a computer does
 	Computational thinking
 	Aspects of programming languages
 	Basic machine architecture
-Lecture 2 – Core elements of programs:
+<h3>Lecture 2 – Core elements of programs:</h3>
 	Kinds of languages
 	Objects, expressions, operators
 	Abstraction by naming
@@ -14,7 +14,7 @@ Lecture 2 – Core elements of programs:
 	Scripts
 	Straightline programs
 	Branching programs
-Week 2
+<h2>Week 2</h2>
 	Lecture 3 – Simple algorithms:
 	Simple programs
 	Iteration
