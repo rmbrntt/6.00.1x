@@ -1,4 +1,4 @@
-__author__ = 'barnett'
+__author__ = 'ryan@barnett.io'
 '''Write a program that uses bisection search (for more info check out the Wikipedia page on bisection
  search) to find the smallest monthly payment to the cent (no more multiples of $10) such that we can pay
  off the debt within a year. Try it out with large inputs, and notice how fast it is (try the same large
