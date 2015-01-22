@@ -1,3 +1,16 @@
 __author__ = 'barnett'
-for num in reversed(range(1, 11)):
-    print num
+def iterPower(base, exp):
+    '''
+    base: int or float.
+    exp: int >= 0
+
+    returns: int or float, base^exp
+    '''
+    # Your code here
+    result = 1
+    for i in range(exp):
+        result *= base
+        print result
+    return result
+
+print iterPower(-4.52, 9)
