@@ -1,5 +1,5 @@
 __author__ = 'barnett'
-def iterPower(base, exp):
+def recurPower(base, exp):
     '''
     base: int or float.
     exp: int >= 0
@@ -7,10 +7,12 @@ def iterPower(base, exp):
     returns: int or float, base^exp
     '''
     # Your code here
-    result = 1
-    for i in range(exp):
-        result *= base
-        print result
-    return result
+    if exp == 0:
+        return 1
+    elif exp > 0 and exp % 2 != 0:
+        return base * recurPower(base, exp/2) * recurPower(base, exp/2)
+    else:
+        return base * recurPower(base, exp-1)
 
-print iterPower(-4.52, 9)
+
+print recurPower(-4.52, 9)
