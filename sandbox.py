@@ -44,17 +44,27 @@ __author__ = 'barnett'
 # print animals.values()
 
 
-aDict = {'a': ['aardvark'], 'b': ['baboon'], 'c': ['coati']}
+def updateHand(hand, word):
+    """
+    Assumes that 'hand' has all the letters in word.
+    In other words, this assumes that however many times
+    a letter appears in 'word', 'hand' has at least as
+    many of that letter in it.
 
-aDict['d'] = ['donkey']
-aDict['d'].append('dog')
-aDict['d'].append('dingo')
+    Updates the hand: uses up the letters in the given word
+    and returns the new hand, without those letters in it.
 
-aDict = {'a': [12, 11, 18, 11], 'c': [10, 13, 11, 17, 10], 'b': [20, 2, 14, 8, 0, 12, 17, 16, 9, 17]}
-print aDict[(max(aDict))]
+    Has no side effects: does not modify hand.
 
-result_dict = {}
-for k in aDict:
-    result_dict[len(aDict[k])] = k
-print result_dict[max(result_dict)]
+    word: string
+    hand: dictionary (string -> int)
+    returns: dictionary (string -> int)
+    """
+    # TO DO ... <-- Remove this comment when you code this function
+    hand_copy = hand.copy()
+    for letter in word:
+        if letter in hand_copy and hand_copy[letter] > 0:
+            hand_copy[letter] -= 1
+    return hand_copy
 
+print updateHand({'a': 1, 'i': 1, 'm': 1, 'l': 2, 'q': 1, 'u': 1}, 'quail')
