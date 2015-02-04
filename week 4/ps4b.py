@@ -7,6 +7,8 @@ import time
 # Problem #6: Computer chooses a word
 #
 #
+
+
 def compChooseWord(hand, wordList, n):
     """
     Given a hand and a wordList, find the word that gives 
@@ -31,7 +33,6 @@ def compChooseWord(hand, wordList, n):
     best_word = ''
     # For each word in the wordList
     for word in wordList:
-        print word
         # If you can construct the word from your hand
         # (hint: you can use isValidWord, or - since you don't really need to test if the word is in the wordList - you can make a similar function that omits that test)
         if isValidWord(word, hand, wordList):
@@ -43,11 +44,7 @@ def compChooseWord(hand, wordList, n):
                 best_word = word
                 best_score = score_check
     # return the best word you found.
-    if best_word == '':
-        return
     return best_word
-
-print compChooseWord({'a': 1, 'i': 1, 'm': 1, 'l': 2, 'q': 1, 'u': 1}, wordList, 7)
 
 #
 # Problem #7: Computer plays a hand
@@ -72,7 +69,33 @@ def compPlayHand(hand, wordList, n):
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     """
     # TO DO ... <-- Remove this comment when you code this function
-    
+    total_score = 0
+    # As long as there are still letters left in the hand:
+    while calculateHandlen(hand) > 0:
+        # Display the hand
+        print "Current hand:",
+        displayHand(hand)
+        # Ask user for input
+        word = compChooseWord(hand, wordList, n)
+        # If the input is a single period:
+        if word != '':
+            total_score += getWordScore(word, n)
+            print '"{0}" earned {1} points. Total: {2} points'.format(word, getWordScore(word, n), total_score)
+            # Update the hand
+            hand = updateHand(hand, word)
+            if calculateHandlen(hand) == 0:
+                print "Total score: {0} points.".format(total_score)
+                return
+            print ''
+        elif word == '':
+            # End the game (break out of the loop)
+            print "Total score: {0} points.".format(total_score)
+            return
+        # Otherwise (the input is not a single period):
+    # Game is over (user entered a '.' or ran out of letters), so tell user the total score
+
+
+print compPlayHand({'a': 2, 'c': 1, 'b': 1, 't': 1}, wordList, 5)
 #
 # Problem #8: Playing a game
 #
