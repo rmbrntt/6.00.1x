@@ -85,17 +85,17 @@ def compPlayHand(hand, wordList, n):
             hand = updateHand(hand, word)
             if calculateHandlen(hand) == 0:
                 print "Total score: {0} points.".format(total_score)
+                print ''
                 return
             print ''
         elif word == '':
             # End the game (break out of the loop)
             print "Total score: {0} points.".format(total_score)
+            print ''
             return
         # Otherwise (the input is not a single period):
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
 
-
-print compPlayHand({'a': 2, 'c': 1, 'b': 1, 't': 1}, wordList, 5)
 #
 # Problem #8: Playing a game
 #
@@ -125,14 +125,50 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print "playGame not yet implemented." # <-- Remove this when you code this function
+    n = HAND_SIZE
+    hand = {}
+    while True:
+        game_status = raw_input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
+        print ''
+        if game_status == 'r' and not hand:
+            print 'You have not played a hand yet. Please play a new hand first!'
+            print ''
+        elif game_status == 'r' and hand:
+            player_type = raw_input('Enter u to have yourself play, c to have the computer play: ')
+            print ''
+            if player_type == 'u':
+                playHand(hand_copy, wordList, n)
+            elif player_type == 'c':
+                compPlayHand(hand, wordList, n)
+            else:
+                print "Invalid command."
+        elif game_status == 'e':
+            break
+        elif game_status not in ['n', 'e', 'r']:
+            print "Invalid command."
+        else:
+            player_type = raw_input('Enter u to have yourself play, c to have the computer play: ')
+            print ''
+            if player_type == 'u':
+                if game_status == 'n':
+                    hand = dealHand(n)
+                    hand_copy = hand.copy()
+                    playHand(hand, wordList, n)
+            elif player_type == 'c':
+                    hand = dealHand(n)
+                    hand_copy = hand.copy()
+                    compPlayHand(hand, wordList, n)
+            else:
+                print "Invalid command."
 
+    return
         
 #
 # Build data structures used for entire session and play game
 #
-# if __name__ == '__main__':
-#     wordList = loadWords()
-#     playGame(wordList)
+HAND_SIZE = 7
+if __name__ == '__main__':
+    wordList = loadWords()
+    playGame(wordList)
 
 
