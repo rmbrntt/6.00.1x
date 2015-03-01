@@ -50,3 +50,10 @@ c2.insert(5)
 
 
 print c1.intersect(c2)
+
+def insert(element):
+    stack = (element,)
+    return stack
+
+insert(3)
+print insert(3)
