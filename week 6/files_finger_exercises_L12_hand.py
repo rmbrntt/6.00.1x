@@ -83,7 +83,6 @@ class Hand(object):
         word: string
         returns: Boolean (if the word was or was not made)
         """
-        # Your code here
         temp_hand = self.hand.copy()
         word_check = 0
         for c in word:
